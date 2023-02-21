@@ -1,0 +1,16 @@
+import turtle as t
+t.speed(5)
+t.bgcolor('black')
+def draw_t(x,y,size):
+	t.penup()
+	t.goto(x,y)
+	t.pendown()
+	t.pencolor("yellow")
+	t.begin_fill()
+	t.circle(size)
+	t.pencolor("#FFFFFF")
+	t.begin_fill()
+	t.circle(size*0.8)
+	draw_t(x+1,y+1,size+20)
+draw_t(0,0,-160)
+turtle.done()
